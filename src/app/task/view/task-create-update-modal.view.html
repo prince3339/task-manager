@@ -1,0 +1,50 @@
+<md-dialog aria-label="Create Task Modal">
+    <form name="taskForm" class="min-height-340">
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2>
+                    <span ng-if="!vm.editMode">
+                        Add task
+                    </span>
+                    <span ng-if="vm.editMode">
+                        Update task
+                    </span>
+                </h2>
+                <span flex></span>
+                <md-button class="md-primary md-raised" ng-click="vm.cancelModal()">
+                    Close
+                </md-button>
+            </div>
+        </md-toolbar>
+        <md-dialog-content class="width-400 flex overflow-x-hidden padding-24">
+            <md-input-container class="md-block">
+                <label>Task name</label>
+                <input name="taskName" ng-model="vm.task.name" required>
+                <div ng-messages="taskForm.taskName.$error">
+                    <div ng-message="required">
+                        This is required.
+                    </div>
+                </div>
+            </md-input-container>
+
+            <md-input-container class="md-block">
+                <label>Description</label>
+                <textarea name="taskDescription" ng-model="vm.task.description" md-maxlength="1000" rows="2" md-select-on-focus required></textarea>
+                <div ng-messages="taskForm.taskDescription.$error">
+                    <div ng-message="required">
+                        This is required.
+                    </div>
+                </div>
+            </md-input-container>
+        </md-dialog-content>
+
+        <md-dialog-actions layout="row">
+            <md-button ng-disabled="taskForm.$invalid" ng-if="!vm.editMode" ng-click="vm.addNewTask(vm.task)">
+                Add task
+            </md-button>
+            <md-button ng-if="vm.editMode" ng-click="vm.updateTask(vm.task)">
+                Update task
+            </md-button>
+        </md-dialog-actions>
+    </form>
+</md-dialog>

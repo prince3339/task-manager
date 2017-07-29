@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Task Manager</title>
+    <link href="/src/public/style/css/app.bundle.css" rel="stylesheet">
+    <link href="/src/lib/css/angular-material/angular-material.min.css" rel="stylesheet">
+</head>
+
+<body layout="column" class="overflow-hidden">
+    <div layout="column" flex ng-cloak>
+
+        <md-toolbar md-scroll-shrink ng-if="true">
+            <div class="md-toolbar-tools">
+                <h3>
+                    <span>Task Manager Application</span>
+                </h3>
+            </div>
+        </md-toolbar>
+
+        <md-content flex>
+            <ui-view></ui-view>
+        </md-content>
+
+    </div>
+
+    <script type="text/javascript" src="vendor.bundle.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+    <script type="text/javascript" src="app.bundle.js"></script>
+
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyBqkGDBbhYSe9X2ZAmrEl2DPFwTPEjoFGo",
+            authDomain: "api-project-335568072909.firebaseapp.com",
+            databaseURL: "https://api-project-335568072909.firebaseio.com",
+            projectId: "api-project-335568072909",
+            storageBucket: "api-project-335568072909.appspot.com",
+            messagingSenderId: "335568072909"
+        };
+        firebase.initializeApp(config);
+    </script>
+</body>
+
+</html>

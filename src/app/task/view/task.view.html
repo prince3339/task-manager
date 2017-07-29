@@ -1,0 +1,45 @@
+<section layout="row" layout-align="center start">
+    <div flex="50" layout="column" class="margin-bottom-32">
+        <form class="padding-h-8">
+            <md-input-container class="md-block" md-no-float>
+                <input ng-model="vm.searchTask" placeholder="Search Task">
+            </md-input-container>
+        </form>
+        <div layout="row" layout-align="end start">
+            <md-button class="md-raised md-primary" ng-click="vm.showAddUpdateTaskModal($event)">Add new task</md-button>
+        </div>
+
+        <md-card ng-if="!vm.loading && vm.tasks.length" md-theme-watch ng-repeat="task in vm.tasks | filter: vm.searchTask">
+            <md-card-title-text layout="row" layout-align="space-between start" class="padding-h-16 padding-top-16">
+                <span class="md-headline">{{task.name}}</span>
+                <div>
+                    <span class="font-size-fixed-12">Created at: {{task.dateCreated | date}}</span>
+                    <span class="font-size-fixed-12 margin-left-16">Updated at: {{task.dateUpdated | date}}</span>
+                </div>
+            </md-card-title-text>
+            <md-card-content class="padding-bottom-0">
+                <p class="font-size-fixed-16">{{task.description}}</p>
+            </md-card-content>
+            <md-card-actions layout="row" layout-align="end center" class="padding-8">
+                <md-button class="md-primary" aria-label="Favorite" ng-click="vm.showAddUpdateTaskModal($event, task)">
+                    Edit
+                </md-button>
+                <md-button ng-click="vm.removeTaskModal($event, task)" class="md-warn md-raised" aria-label="Settings">
+                    Delete
+                </md-button>
+            </md-card-actions>
+        </md-card>
+
+        <div flex layout="row" layout-align="center center" ng-if="vm.loading">
+            <md-progress-circular md-mode="indeterminate"></md-progress-circular>
+        </div>
+
+        <div layout="row" layout-align="center center" ng-if="!vm.loading && !(vm.tasks | filter: vm.searchTask).length && vm.tasks.length">
+            <h2>No Match Found !!!!</h2>
+        </div>
+
+        <div layout="row" layout-align="center center" ng-if="!vm.loading && !vm.tasks.length">
+            <h2>No Task Available !!!!</h2>
+        </div>
+    </div>
+</section>

@@ -21,7 +21,8 @@
     "angularfire": "^2.3.0",
     "clean-webpack-plugin": "^0.1.16",
     "firebase": "^4.2.0",
-    "html-webpack-plugin": "^2.29.0"
+    "html-webpack-plugin": "^2.29.0",
+    "mr-doc-theme-cayman": "^1.4.1"
   },
   "devDependencies": {
     "copy-webpack-plugin": "^4.0.1",

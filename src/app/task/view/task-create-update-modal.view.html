@@ -39,10 +39,10 @@
         </md-dialog-content>
 
         <md-dialog-actions layout="row">
-            <md-button ng-disabled="taskForm.$invalid" ng-if="!vm.editMode" ng-click="vm.addNewTask(vm.task)">
+            <md-button class="md-primary md-raised" ng-disabled="taskForm.$invalid" ng-if="!vm.editMode" ng-click="vm.addNewTask(vm.task)">
                 Add task
             </md-button>
-            <md-button ng-if="vm.editMode" ng-click="vm.updateTask(vm.task)">
+            <md-button class="md-primary md-raised" ng-if="vm.editMode" ng-click="vm.updateTask(vm.task)">
                 Update task
             </md-button>
         </md-dialog-actions>

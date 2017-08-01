@@ -2,8 +2,11 @@
 
 AngularJs Todo Application with *<b>Firebase</b>* and *<b>Angular Material</b>*
 
-##Demo
+## Demo
 * [Task Manger](http://www.dropwizard.io/1.0.2/docs/)
+
+## Code explanation
+* [Documentation](http://www.dropwizard.io/1.0.2/docs/)
 
 ## Getting Started
 

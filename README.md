@@ -3,7 +3,7 @@
 AngularJs Todo Application with *<b>Firebase</b>* and *<b>Angular Material</b>*
 
 ## Demo
-* [Task Manger](http://www.dropwizard.io/1.0.2/docs/)
+* [Task Manger](https://prince3339.github.io/task-manager/)
 
 ## Code explanation
 * [Documentation](http://www.dropwizard.io/1.0.2/docs/)

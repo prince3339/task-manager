@@ -1,0 +1,38 @@
+{
+  "name": "task-manager",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --open",
+    "watch": "webpack --watch",
+    "build": "webpack"
+  },
+  "author": "Sabbir Ahmed Siddiquee",
+  "license": "ISC",
+  "dependencies": {
+    "@uirouter/angularjs": "latest",
+    "angular": "^1.6.5",
+    "angular-animate": "^1.6.5",
+    "angular-aria": "^1.6.5",
+    "angular-material": "^1.1.4",
+    "angular-messages": "^1.6.5",
+    "angularfire": "^2.3.0",
+    "clean-webpack-plugin": "^0.1.16",
+    "firebase": "^4.2.0",
+    "html-webpack-plugin": "^2.29.0",
+    "mr-doc-theme-cayman": "^1.4.1"
+  },
+  "devDependencies": {
+    "copy-webpack-plugin": "^4.0.1",
+    "css-loader": "^0.28.4",
+    "extract-text-webpack-plugin": "^3.0.0",
+    "mr-doc": "^3.2.1",
+    "node-sass": "^4.5.3",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.18.2",
+    "webpack": "^3.4.1",
+    "webpack-dev-server": "^2.6.1"
+  }
+}

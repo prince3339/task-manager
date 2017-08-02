@@ -41,20 +41,12 @@ module.exports = {
     // },
     module: {
         rules: [{
-                test: /\.css$/,
-                use: ExtractTextPlugin.extract({
-                        fallback: "style-loader",
-                        use: "css-loader"
-                    }) //This loader used to load css files
-            },
-            {
-                test: /\.(scss|sass)$/,
-                use: ExtractTextPlugin.extract({
-                        fallback: 'style-loader',
-                        //resolve-url-loader may be chained before sass-loader if necessary
-                        use: ['css-loader', 'sass-loader']
-                    }) ////This loader used to load and extract scss/css files
-            }
-        ]
+            test: /\.(scss|sass|css)$/,
+            use: ExtractTextPlugin.extract({
+                    fallback: 'style-loader',
+                    //resolve-url-loader may be chained before sass-loader if necessary
+                    use: ['css-loader?-minimize', 'sass-loader']
+                }) ////This loader used to load and extract scss/css files
+        }]
     }
 };

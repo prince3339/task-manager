@@ -3,10 +3,10 @@
 AngularJs Todo Application with *<b>Firebase</b>* and *<b>Angular Material</b>*
 
 ## Demo
-* [Task Manger](https://prince3339.github.io/task-manager/)
+* [Task Manger](https://task-manager-intellij.herokuapp.com/index.html#!/)
 
 ## Code explanation
-* [Documentation](http://www.dropwizard.io/1.0.2/docs/)
+* [Documentation](http://task-manager-intellij.herokuapp.com/doc/index.html)
 
 ## Getting Started
 
@@ -30,10 +30,10 @@ A step by step series of examples that tell you have to get a development env ru
 Browse to task-manager directory [ *If you download zip unzip it first. 
 Then got it task-manager-master (Probaly it's your downloaded file's name)]
 
-2. Open your command prompt/terminal and run <b>npm install</b> command. 
+2. Open your command prompt/terminal and run *npm install* command. 
 This will install all the dependency files for this project
 
-3. Now run  <b>npm start</b>
+3. Now run  *npm start*
 After a while you will see the app is up and running on http://localhost:8080
 ```
 

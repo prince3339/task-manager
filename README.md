@@ -37,8 +37,6 @@ This will install all the dependency files for this project
 After a while you will see the app is up and running on http://localhost:8080
 ```
 
-End with an example of getting some data out of the system or using it for a little demo
-
 ## Built With
 
 * [AngularJs](https://angularjs.org/) - AngularJs MV* framework
